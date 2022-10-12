@@ -1,0 +1,243 @@
+:root {
+    --white: #FFF8EA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--white);
+}
+
+::selection{
+    color: #fff;
+    background: var(--white);
+}
+
+.wrapper{
+    width: 400px;
+    background-color: #002E94;
+    border-radius: 7px;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper header {
+    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white);
+    padding: 15px 15px;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+}
+
+header i {
+    font-size: 0em;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.wrapper.active header i {
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.wrapper .input-part {
+    margin: 20px 25px 30px;
+}
+
+.wrapper.active .input-part {
+    display: none;
+}
+
+.input-part .info-txt {
+    display: none;
+    font-size: 17px;
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+.input-part .info-txt.error {
+    color: #721c24;
+    display: block;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.input-part .info-txt.pending {
+    color: #0c5460;
+    display: block;
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+}
+
+.input-part :where(input, button) {
+    width: 100%;
+    height: 55px;
+    border: 2px solid var(--white);
+    outline: none;
+    font-size: 18px;
+    border-radius: 7px;
+}
+
+.input-part input {
+    background-color: var(--white);
+    text-align: center;
+    padding: 0 15px;
+}
+
+.input-part input:is(:focus, :valid) {
+    border: 2px solid var(--white);
+}
+
+.input-part input::placeholder {
+    color: #bfbfbf;
+}
+
+.input-part .separator {
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    background: #ccc;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separator::before {
+    content: "or";
+    color: var(--white);
+    font-size: 19px;
+    padding: 0 15px;
+    background: #002E94;
+}
+
+.input-part button {
+    color: #fff;
+    cursor: pointer;
+    background: #002E94;
+    transition: 0.3s ease;
+}
+
+.input-part button:hover {
+    background: var(--white);
+    color: #002E94;
+}
+
+.wrapper .weather-part {
+    display: none;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.wrapper.active .weather-part {
+    display: flex;
+    padding-top: 30px;
+}
+
+.weather-part img {
+    max-width: 125px;
+}
+
+.weather-part .temp {
+    color: var(--white);
+    display: flex;
+    font-weight: 500;
+    font-size: 60px;
+}
+
+.weather-part .temp .numb {
+    font-weight: 600;
+}
+
+.weather-part .weather {
+    color: var(--white);
+    font-size: 25px;
+    text-align: center;
+    text-transform: capitalize;
+    margin: -5px 20px 15px;
+}
+
+.weather-part .location {
+    color: var(--white);
+    display: flex;
+    font-size: 19px;
+    padding: 0 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.location i {
+    color: var(--white);
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.weather-part .bottom-details {
+    color: var(--white);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-top: 2px solid #ccc;
+}
+
+.bottom-details .column {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.column i {
+    font-size: 25px;
+    padding-right: 10px;
+}
+
+.column.humidity {
+    border-left: 2px solid #ccc;
+}
+
+.column .details {
+    justify-content: center;
+    align-items: center;
+}
+
+.details .wind, .humidity span {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: -3px;
+}
+
+.details .wind .kilo {
+    font-size: 20px;
+}
+
+.column .details p {
+    font-size: 15px;
+    margin-top: -5px;
+}
+
+.humidity i {
+    font-size: 30px;
+    padding-right: 10px;
+}
+
+
+
+
+
